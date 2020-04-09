@@ -1,0 +1,10 @@
+version: '3'
+services:
+  serve:
+    build: ./auto-browser
+    # 端口映射
+    volumes: 
+      - ./auto-browser/src:/code/src
+      - ./data:/data
+    ports:
+        - "8200:3000"
